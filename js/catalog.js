@@ -1,25 +1,13 @@
 // Show max price from range
 
-let priceRange = document.querySelector('.priceRange');
-let priceMaxRange = document.querySelector('.maxPriceRange');
+let priceRange = document.querySelector('.price-range');
+let priceMaxRange = document.querySelector('.max-price');
 
 priceRange.addEventListener('change', correctInputMaxPrice);
 priceMaxRange.addEventListener('change', correctRangeMaxPrice);
 
-
-
-// priceRange.onchange = function() {
-//     let priceMax = priceRange.value;
-//     priceMaxRange.value = priceMax;
-//     console.log(priceMax);
-// }
-
-// priceMaxRange.onchange = function() {
-//     priceRange.value = priceMaxRange.value;
-// }
-
 function correctInputMaxPrice() {
-    priceMaxRange.value = priceRange.value;   
+    priceMaxRange.value = priceRange.value;
 }
 
 function correctRangeMaxPrice() {
