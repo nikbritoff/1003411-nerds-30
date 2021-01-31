@@ -42,7 +42,9 @@
   --active-green: #00AA62;
   --active-yellow: #E5A722;
 
-  --text-gray-footer: #666666;
+  --text-black: #283136;
+  --text-gray: #666666;
+  --text-black-footer: #444444;
 
 }
 
@@ -51,6 +53,7 @@
 
 .page-body {
   font-family: Roboto;
+  color: var(--basic-black);
 }
 
 a {
@@ -83,6 +86,7 @@ a {
 .basic-text {
   font-size: 16px;
   line-height: 24px;
+  color: var(--text-black);
 }
 
 
@@ -94,6 +98,7 @@ a {
   font-size: 16px;
   line-height: 30px;
   background-color: var(--basic-gray);
+  text-transform: uppercase;
 }
 
 .site-navigation-list {
@@ -114,6 +119,14 @@ a {
 }
 
 
+.header {
+  background-color: var(--basic-gray);
+  font-family: "Roboto Medium";
+  font-size: 55px;
+  line-height: 55px;
+}
+
+
 
 /* Main */
 
@@ -127,11 +140,6 @@ a {
   list-style: none;
 }
 
-.features-item-header {
-  font-family: "Roboto Medium";
-  font-size: 55px;
-  line-height: 55px;
-}
 
 .features-slider-controls-list {
   list-style: none;
@@ -144,6 +152,7 @@ a {
   font-family: "Roboto Bold";
   font-size: 24px;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
 .services-list {
@@ -183,16 +192,11 @@ a {
   line-height: 45px;
 }
 
-.about-us-list-caption {
+.about-us-caption {
   font-family: "Roboto Bold";
   font-size: 16px;
   line-height: 24px;
-}
-
-.about-us-table-caption {
-  font-family: "Roboto Bold";
-  font-size: 16px;
-  line-height: 24px;
+  text-transform: uppercase;
 }
 
 .about-us-table-numbers {
@@ -212,23 +216,20 @@ a {
   line-height: 18px;
 }
 
-
-
-
-
 /* Footer */
 
 .footer-contacts {
-  color: var(--text-gray-footer);
+  color: var(--text-gray);
 }
 
 .footer-contacts-header {
   color: var(--basic-black);
+  text-transform: uppercase;
 }
 
 .contacts-phone {
   text-decoration: none;
-  color: var(--text-gray-footer);
+  color: inherit;
 }
 
 .contacts-address {
@@ -244,6 +245,7 @@ a {
 .footer-text {
   font-size: 16px;
   line-height: 22px;
+  color: var(--text-black-footer);
 }
 
 .footer-social-list {
@@ -275,13 +277,64 @@ a {
 }
 
 
-
-
-
 /* Modal */
 
 .modal-label {
-  font: "Roboto Bold";
+  font-family: "Roboto Bold";
   font-size: 16px;
   line-height: 18px;
+}
+
+
+
+/* Catalog */
+
+.catalog-filter {
+  color: var(--text-black);
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.catalog-caption,
+.product-name {
+  font-family: "Roboto Bold";
+  color: var(--basic-black);
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.price-range {
+  color: var(--basic-green);
+}
+
+.catalog-sorting {
+  list-style: none;
+}
+
+.catalog-sorting a {
+  color: var(--basic-black);
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.cart-product {
+  background-color: var(--basic-gray);
+  text-align: center;
+}
+
+.cart-product p {
+  color: var(--text-gray);
+}
+
+.pagination ul {
+  list-style: none;
+}
+
+.pagination a {
+  color: var(--basic-black);
+  background-color: var(--basic-gray);
+  text-transform: uppercase;
 }
