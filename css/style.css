@@ -49,11 +49,20 @@
 }
 
 
-/* All page */
+/* Global */
+
+.page {
+  height: 100%;
+}
 
 .page-body {
   font-family: Roboto;
   color: var(--basic-black);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 a {
@@ -99,10 +108,23 @@ a {
   line-height: 30px;
   background-color: var(--basic-gray);
   text-transform: uppercase;
+
+  display: grid;
+}
+
+.main-navigation {
+  display: grid;
+  grid-template-columns: 160px 1fr auto;
+}
+
+.main-header-logo {
+  grid-column: 1 / 2;
 }
 
 .site-navigation-list {
   list-style: none;
+  grid-column: 2 /  3;
+  justify-self: center;
 }
 
 .site-navigation-item {
@@ -130,10 +152,15 @@ a {
 
 /* Main */
 
+
+
 /* Features */
 
 .features {
   background-color: var(--basic-gray);
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 .features-list {
@@ -148,6 +175,7 @@ a {
 
 /* Services */
 
+
 .services h3 {
   font-family: "Roboto Bold";
   font-size: 24px;
@@ -156,6 +184,9 @@ a {
 }
 
 .services-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
   list-style: none;
 }
 
@@ -186,6 +217,12 @@ a {
 
 /* About-us */
 
+.about-us{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto;
+}
+
 .about-us-header {
   font-family: "Roboto Medium";
   font-size: 45px;
@@ -197,6 +234,20 @@ a {
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
+}
+
+.about-us img {  
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.about-us-table {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.about-us-caption {
+  grid-row: 2/3;
 }
 
 .about-us-table-numbers {
@@ -218,8 +269,17 @@ a {
 
 /* Footer */
 
+.main-footer {
+  display: grid;
+}
+
 .footer-contacts {
   color: var(--text-gray);
+}
+
+.footer-social {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
 .footer-contacts-header {
@@ -249,6 +309,9 @@ a {
 }
 
 .footer-social-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 9px;
   list-style: none;
 }
 
@@ -289,11 +352,24 @@ a {
 
 /* Catalog */
 
+.catalog {
+  display: grid;
+  grid-template-columns: 260px 360px 360px;
+  grid-template-rows: auto auto auto;
+}
+
+.catalog-sorting {
+  grid-column: 2/4;
+}
+
 .catalog-filter {
   color: var(--text-black);
   font-size: 16px;
   line-height: 19px;
+
+  grid-row: 1 / -1;
 }
+
 
 .catalog-caption,
 .product-name {
@@ -308,16 +384,24 @@ a {
   color: var(--basic-green);
 }
 
-.catalog-sorting {
+.pagination {
+  grid-column: -1 / -2;
+  grid-row: -1 / -2;
+}
+
+.catalog-sorting-list {
   list-style: none;
 }
 
-.catalog-sorting a {
+.catalog-sorting-list a {
   color: var(--basic-black);
 }
 
 .catalog-list {
   list-style: none;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .cart-product {

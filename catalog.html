@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -40,8 +40,9 @@
         <h3 class="hidden">Фильтр шаблонов</h3>
         <form method="get" action="https://echo.htmlacademy.ru">
 
+          <b class="catalog-caption catalog-caption-price">Стоимость</b>
           <fieldset>
-            <legend class="catalog-caption">Стоимость:</legend>
+            <!-- <legend class="catalog-caption">Стоимость:</legend> -->
             <input class="price-range" type="range" min="0" max="20000" step="1000" value="15000">
             <label>От<input class="price" type="text" name="price-start" value="0"></label>
             <label>До<input class="max-price" type="text" name="price-end" value="15000"></label>
@@ -87,16 +88,17 @@
         </form>
       </aside>
 
-      <div>
-        <div>
-          <p class="catalog-caption">Сортировать:</p>
-          <ul class="catalog-sorting">
+        
+        <div class="catalog-sorting">
+          <p class="catalog-caption catalog-sorting-caption">Сортировать:</p>          
+          <ul class="catalog-sorting-list">
             <li><a href="">По цене</a></li>
             <li><a href="">По типу</a></li>
             <li><a href="">По названию</a></li>
           </ul>
         </div>
 
+        
         <h3 class="hidden">Список шаблонов</h3>
         <ul class="catalog-list">
           <li class="catalog-item">
@@ -171,7 +173,6 @@
             </div>
           </li>
         </ul>
-      </div>
 
       <div class="pagination">
         <ul>
@@ -227,9 +228,10 @@
           </a>
         </li>
       </ul>
-
-      <b class="footer-header">Давайте дружить, это выгодно!</b>
-      <p class="footer-text">Скидка 10% для друзей из социальных сетей.</p>
+      <div>
+        <b class="footer-header">Давайте дружить, это выгодно!</b>
+        <p class="footer-text">Скидка 10% для друзей из социальных сетей.</p>
+      </div>      
     </section>
   </footer>
 
