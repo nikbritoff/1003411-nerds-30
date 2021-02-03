@@ -16,31 +16,35 @@
 <body class="page-body">
 
   <header class="main-header">
-    <nav class="main-navigation">
-      <a class="main-header-logo" href="index.html">
-        <img src="img/logo-nerds.svg" width="160" height="65" alt="Дизайн студия «Нёрдс»">
-      </a>
-      <ul class="site-navigation-list">
-        <li><a class="site-navigation-item" href="#">Студия</a></li>
-        <li><a class="site-navigation-item" href="#">Клиенты</a></li>
-        <li><a class="site-navigation-item" href="catalog.html">Магазин</a></li>
-        <li><a class="site-navigation-item" href="#">Контакты</a></li>
-      </ul>
-      <a class="site-navigation-item" href="#">Корзина</a>
-    </nav>
+    <div class="layout-positioner">
+      <nav class="main-navigation">
+        <a class="main-header-logo" href="index.html">
+          <img src="img/logo-nerds.svg" width="160" height="65" alt="Дизайн студия «Нёрдс»">
+        </a>
+        <ul class="site-navigation-list">
+          <li><a class="site-navigation-item" href="#">Студия</a></li>
+          <li><a class="site-navigation-item" href="#">Клиенты</a></li>
+          <li><a class="site-navigation-item" href="catalog.html">Магазин</a></li>
+          <li><a class="site-navigation-item" href="#">Контакты</a></li>
+        </ul>
+        <a class="site-navigation-item" href="#">Корзина</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
-    <h1 class="header">Магазин готовых шаблонов</h1>
+  <main class="layout-positioner">
+    <h1 class="header catalog-header">Магазин готовых шаблонов</h1>
 
     <section class="catalog">
-      <h2 class="hidden">Готовые шаблоны Веб-сайтов</h2>
+      <h2 class="display-none">Готовые шаблоны Веб-сайтов</h2>
 
       <aside class="catalog-filter">
-        <h3 class="hidden">Фильтр шаблонов</h3>
+        <h3 class="display-none">Фильтр шаблонов</h3>
         <form method="get" action="https://echo.htmlacademy.ru">
 
           <b class="catalog-caption catalog-caption-price">Стоимость</b>
+          
+          <!-- <div class="aside-column"> -->
           <fieldset>
             <!-- <legend class="catalog-caption">Стоимость:</legend> -->
             <input class="price-range" type="range" min="0" max="20000" step="1000" value="15000">
@@ -48,7 +52,7 @@
             <label>До<input class="max-price" type="text" name="price-end" value="15000"></label>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="aside-filter-layout">
             <legend class="catalog-caption">Сетка:</legend>
             <ul>
               <li>
@@ -85,21 +89,23 @@
           </fieldset>
 
           <button type="submit">Показать</button>
+
+        <!-- </div> -->
         </form>
       </aside>
 
         
-        <div class="catalog-sorting">
+        
           <p class="catalog-caption catalog-sorting-caption">Сортировать:</p>          
           <ul class="catalog-sorting-list">
             <li><a href="">По цене</a></li>
             <li><a href="">По типу</a></li>
             <li><a href="">По названию</a></li>
           </ul>
-        </div>
+        
 
         
-        <h3 class="hidden">Список шаблонов</h3>
+        <h3 class="display-none">Список шаблонов</h3>
         <ul class="catalog-list">
           <li class="catalog-item">
             <a href="">
@@ -194,23 +200,29 @@
     </section>
   </main>
 
-  <footer class="main-footer">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x1c275a881519dab7!2z0JjQndCi0JXQoNCQ0JrQotCY0JLQndCr0JUg0J7QkdCj0KfQkNCu0KnQmNCVINCi0JXQpdCd0J7Qm9Ce0JPQmNCY!5e0!3m2!1sru!2sru!4v1611348115415!5m2!1sru!2sru"
-      width="1440" height="416" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-    </iframe>
+  <footer class="main-footer">  
 
-    <section class="footer-contacts">
-      <h2 class="footer-contacts-header">NЁRDS DESIGN STUDIO</h2>
-      <address class="contacts-address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-      <p>
-        тел. <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a>
-      </p>
-      <a class="button" href=""><span class="button-text">Напишите нам</span></a>
-    </section>
+    <div class="main-footer-map-layout-positioner">
+      <section class=" main-footer-map">
+          <!-- <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x1c275a881519dab7!2z0JjQndCi0JXQoNCQ0JrQotCY0JLQndCr0JUg0J7QkdCj0KfQkNCu0KnQmNCVINCi0JXQpdCd0J7Qm9Ce0JPQmNCY!5e0!3m2!1sru!2sru!4v1611348115415!5m2!1sru!2sru"
+            width="1440" height="416" frameborder="0" style="border:0;" allowfullscreen="" aria-display-none="false" tabindex="0">
+          </iframe> -->
+          <div class="footer-contacts">
+            <h2 class="footer-contacts-header">NЁRDS DESIGN STUDIO</h2>
+            <address class="contacts-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
+            <p>
+              тел. <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a>
+            </p>
+            <a class="button" href=""><span class="button-text">Напишите нам</span></a>
+          </div>
+      </section>
+    </div>
 
+
+    <div class="layout-positioner">
     <section class="footer-social">
-      <h2 class="hidden">Мы в социальных сетях:</h2>
+      <h2 class="display-none">Мы в социальных сетях:</h2>
       <ul class="footer-social-list">
         <li>
           <a href="#" class="social-icon">
@@ -231,8 +243,9 @@
       <div>
         <b class="footer-header">Давайте дружить, это выгодно!</b>
         <p class="footer-text">Скидка 10% для друзей из социальных сетей.</p>
-      </div>      
+      </div>
     </section>
+    </div>
   </footer>
 
   <script src="js/catalog.js"></script>
