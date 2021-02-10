@@ -53,7 +53,7 @@
 
 .page {
   height: 100%;
-  
+
   font-family: Roboto;
   font-size: 16px;
   line-height: 24px;
@@ -63,7 +63,7 @@
 .page-body {
 
   min-height: 100%;
-  
+
   min-width: 1440px;
   align-content: start;
 }
@@ -86,7 +86,7 @@ a {
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
-  color: var(--basic-black);  
+  color: var(--basic-black);
 }
 
 .display-none {
@@ -123,29 +123,42 @@ a {
   color: var(--basic-black);
   text-transform: uppercase;
 
-  background-color: var(--basic-gray);  
+  background-color: var(--basic-gray);
 
   display: grid;
-  
+
 }
 
 .main-navigation {
-  display: grid;
-  grid-template-columns: 160px 1fr auto;
+  /* display: grid; */
+  /* grid-template-columns: 160px 1fr auto; */
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-header-logo {
-  grid-column: 1 / 2;
+  /* grid-column: 1 / 2; */
+  margin-top: 75px;
 }
 
 .site-navigation-list {
   list-style: none;
-  grid-column: 2 /  3;
-  justify-self: center;                /* Свойство выравнивает элемент по горизонтали внутри его контейнера */
+  margin: 0;
+  margin-top: 75px;
+  padding: 0;
+
+  display: flex;
+  align-items: flex-end;
+  /* grid-column: 2 /  3; */
+  /* justify-self: center;                Свойство выравнивает элемент по горизонтали внутри его контейнера */
 }
 
 .site-navigation-item {
   color: var(--basic-black);
+  margin-left: 45px;
+  margin-top: 75px;
+  align-self: flex-end;
 }
 
 .site-navigation-item:hover{
@@ -172,9 +185,15 @@ a {
   background-color: var(--basic-gray);
 }
 
+.features-container {
+  background-color: var(--basic-gray);
+  width: 100%;
+}
+
 .features-item {
   display: grid;
   grid-template-columns: 400px 760px;
+  z-index: 1;
 
 }
 
@@ -203,7 +222,7 @@ a {
 .services-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  
+
   list-style: none;
   padding-left: 0;
   margin-top: 0;
@@ -262,7 +281,7 @@ a {
   font-family: "Roboto Bold";
   font-weight: 700;
   text-transform: uppercase;
-  
+
   grid-row: 2/3;
 
   outline: 3px solid var(--basic-yellow);
@@ -270,7 +289,7 @@ a {
 
 }
 
-.about-us img {  
+.about-us img {
   grid-column: 2/3;
   grid-row: 1/2;
 
@@ -285,7 +304,18 @@ a {
 
   outline: 3px solid orange;
   outline-offset: -3px;
+}
 
+.partners {
+  display: flex;
+  justify-content: space-between;
+}
+
+.partners a {
+  display: block;
+}
+.partners a:first-child {
+  margin-left: 32px;
 }
 
 
@@ -390,6 +420,9 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 9px;
   list-style: none;
+
+  padding: 0;
+  margin: 0;
 }
 
 .social-icon {
@@ -412,7 +445,7 @@ a {
   background: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
 }
 
-.social-icon:active img {
+.social-icon:active svg {
   opacity: 0.3;
 }
 
@@ -435,7 +468,8 @@ a {
 
   background-color: var(--basic-gray);
 
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog {
@@ -443,6 +477,8 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
 }
+
+
 
 /* .aside-column {
 
@@ -467,6 +503,8 @@ a {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 
+  margin-top: 0;
+
   outline: 3px dotted rgb(248, 49, 82);
   outline-offset: -3px;
 }
@@ -478,6 +516,18 @@ a {
 
   grid-row: 1 / -2;
   grid-column: 1 / 2 ;
+}
+
+.aside-filter-layout {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.aside-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 
@@ -496,12 +546,20 @@ a {
 
 .catalog-sorting-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 
   grid-column: 3 / 4;
   grid-row: 1 / 2;
 
+  text-transform: uppercase;
+
   outline: 3px dotted rgb(136, 2, 25);
   outline-offset: -3px;
+
+
+
+  display: flex;
 }
 .catalog-sorting-list a {
   color: var(--basic-black);
@@ -519,16 +577,24 @@ a {
   outline-offset: -3px;
 
   padding: 0;
-  
+
 }
 
 .pagination {
-  grid-column: 2 / -1;
+  grid-column: 2 / 3;
   grid-row: -1 / -2;
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+
+  outline: 3px solid dotted rgb(77, 1, 87);
+  outline-offset: -3px;
 }
 
 .catalog-item {
-  
 
   outline: 3px dotted rgb(231, 33, 7);
   outline-offset: -3px;
@@ -545,7 +611,7 @@ a {
 
 .pagination ul {
   list-style: none;
-  
+
   padding: 0;
 }
 
