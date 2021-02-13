@@ -193,8 +193,10 @@ a {
 .features-item {
   display: grid;
   grid-template-columns: 400px 760px;
-  z-index: 1;
+}
 
+.features-item div {
+  z-index: 1;
 }
 
 .features-list {
