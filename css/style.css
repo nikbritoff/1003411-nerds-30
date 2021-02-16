@@ -64,6 +64,7 @@
   min-height: 100%;
   min-width: 1440px;
   align-content: start;
+  position: relative;
 }
 
 .layout-positioner {
@@ -210,7 +211,8 @@ a {
   height: 15px;
   top: 7px;
   left: 0;
-  background-image: url("/img/icon-cart.svg");
+  background-image: url("../img/icon-cart.svg");
+  background-position: 0 0;
   background-repeat: no-repeat;
 }
 
@@ -235,30 +237,35 @@ a {
 .features {
   position: relative;
   background-repeat: no-repeat;
-  background-position: top right;
-  height: 431px;
+  background-position: right bottom;
+  height: 421px;
 }
 
 .features-slide-1 {
-  background-image: url("/img/slide-phones.png");
+  background-image: url("../img/slide-phones.png");
 }
 
 .features-slide-2 {
-  background-image: url("/img/slide-computers.png");
+  background-image: url("../img/slide-computers.png");
 }
 
 .features-slide-3 {
-  background-image: url("/img/slide-gadgets.png");
+  background-image: url("../img/slide-gadgets.png");
 }
 
 .features-item {
   height: 431px;
-  padding-top: 78px;
+  padding: 0;
+}
+
+.features-item-header {
+  display: block;
+  padding-top: 68px;
 }
 
 .features-item p {
   margin: 0;
-  margin-top: 37px;
+  margin-top: 27px;
 }
 
 .slide {
@@ -272,7 +279,7 @@ a {
 .features-button {
   width: 240px;
   height: 50px;
-  margin-top: 38px;
+  margin-top: 39px;
 
   display: flex;
   justify-content: center;
@@ -288,7 +295,7 @@ a {
 /* Slider controls */
 .features-slider-controls-list {
   position: absolute;
-  top: 317px;
+  top: 307px;
   left: 536px;
 
   display: flex;
@@ -307,7 +314,7 @@ a {
 }
 
 .features-slider-controls-list .current {
-  background-image: url("/img/icon-slider-control-current.svg");
+  background-image: url("../img/icon-slider-control-current.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -327,7 +334,8 @@ a {
 
 .services-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 300px 300px 300px;
+  column-gap: 100px;
 
   list-style: none;
   padding-left: 0;
@@ -340,13 +348,20 @@ a {
   margin-top: 80px;
 }
 
+
+.services-item h3 {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
 .button-services {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 160px;
   height: 50px;
-  margin-bottom: 78px;
+  margin-top: 31px;
+  margin-bottom: 80px;
 }
 
 .button-services-app {
@@ -584,7 +599,7 @@ a {
   height: 416px;
   position: relative;
 
-  background-image: url(/img/main-footer-map.png);
+  background-image: url("../img/main-footer-map.png");
   background-size: auto;
   background-position: 0 50%;
 }
@@ -600,8 +615,8 @@ a {
 
   position: absolute;
   top: 55px;
-  left: 67px;
-  padding-top: 49px;
+  left: 140px;
+  padding-top: 39px;
   padding-left: 50px;
 
   z-index: 10;
@@ -619,14 +634,20 @@ a {
 .contacts-phone {
   text-decoration: none;
   color: inherit;
+  margin-top: 5px;
 }
 
 .contacts-address {
   font-style: normal;
+  line-height: 18px;
+  margin-top: 20px;
 }
 
-.footer-contacts > .button {
+.contacts-button {
+  margin-top: 35px;
   width: 219px;
+  cursor: pointer;
+  border: none;
 }
 
 
@@ -662,7 +683,7 @@ a {
 
 .footer-social-text p {
   margin: 0;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 /* Social icons */
@@ -705,14 +726,125 @@ a {
 
 
 /* Modal */
+.modal-wrapper {
+  position: relative;
+}
+
+.modal {
+  width: 960px;
+  min-height: 590px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  z-index: 1000;
+
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  outline: 2px solid green;
+  outline-offset: -2px;
+}
+
+.modal-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.modal-header {
+  display: block;
+  font-family: Roboto Bold;
+  font-style: normal;
+  font-size: 45px;
+  line-height: 53px;
+  color: var(--basic-black);
+  margin-left: 100px;
+  margin-right: 99px;
+  margin-top: 63px;
+}
 
 .modal-label {
   font-family: "Roboto Bold";
   font-size: 16px;
   line-height: 18px;
+  margin-top: 0;
+
+  box-sizing: border-box;
 }
 
+.modal-contacts-info {
+  margin-top: 37px;
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.modal-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-item input {
+  margin: 0;
+  margin-top: 9px;
+  width: 360px;
+  height: 50px;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+
+.modal-label-textarea {
+  margin-left: 100px;
+  margin-right: 98px;
+}
+
+.modal-letter{
+  margin-left: 100px;
+  margin-right: 99px;
+  height: 118px;
+  margin-top: 9px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.modal-submit-button {
+  margin-left: 100px;
+  width: 259px;
+  margin-top: 47px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close-button {
+  width: 21px;
+  height: 21px;
+  border: none;
+  background-color: inherit;
+  background-image: url("../img/botton-close.svg");
+  opacity: 0.3;
+  position: absolute;
+  top: 78px;
+  right: 99px;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  opacity: 1;
+  border: none;
+}
+
+.modal-close-button:active {
+  opacity: 0.1;
+  border: none;
+}
+
+.modal-visible {
+  display: block;
+}
 
 /* Catalog */
 
