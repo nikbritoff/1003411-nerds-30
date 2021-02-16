@@ -34,27 +34,24 @@
     </div>
   </header>
 
-  <main class="layout-positioner">
+  <main>
     <h1 class="header catalog-header">Магазин готовых шаблонов</h1>
 
-    <section class="catalog">
+    <section class="catalog layout-positioner">
       <h2 class="display-none">Готовые шаблоны Веб-сайтов</h2>
 
       <aside class="catalog-filter">
         <h3 class="display-none">Фильтр шаблонов</h3>
         <form method="get" action="https://echo.htmlacademy.ru">
 
-          <b class="catalog-caption catalog-caption-price">Стоимость</b>
-
-          <!-- <div class="aside-column"> -->
-          <fieldset class="aside-filter-layout">
-            <!-- <legend class="catalog-caption">Стоимость:</legend> -->
+          <fieldset>
+            <legend class="catalog-caption">Стоимость:</legend>
             <input class="price-range" type="range" min="0" max="20000" step="1000" value="15000">
             <label>От<input class="price" type="text" name="price-start" value="0"></label>
             <label>До<input class="max-price" type="text" name="price-end" value="15000"></label>
           </fieldset>
 
-          <fieldset class="aside-filter-layout">
+          <fieldset>
             <legend class="catalog-caption">Сетка:</legend>
             <ul class="aside-filter-list">
               <li>
@@ -69,7 +66,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="aside-filter-layout">
+          <fieldset>
             <legend class="catalog-caption">Особенности:</legend>
             <ul class="aside-filter-list">
               <li>
@@ -91,21 +88,17 @@
           </fieldset>
 
           <button type="submit">Показать</button>
-
-          <!-- </div> -->
         </form>
       </aside>
 
-
-
-      <p class="catalog-caption catalog-sorting-caption">Сортировать:</p>
+      <div class="catalog-container">
+        <p class="catalog-caption catalog-sorting-caption">Сортировать:</p>
+      
       <ul class="catalog-sorting-list">
-        <li><a href="">По цене</a></li>
-        <li><a href="">По типу</a></li>
-        <li><a href="">По названию</a></li>
+        <li class="catalog-sorting-item"><a href="">По цене</a></li>
+        <li class="catalog-sorting-item"><a href="">По типу</a></li>
+        <li class="catalog-sorting-item"><a href="">По названию</a></li>
       </ul>
-
-
 
       <h3 class="display-none">Список шаблонов</h3>
       <ul class="catalog-list">
@@ -114,11 +107,14 @@
             <img src="img/catalog-layouts/Sedona.jpg" width="358" height="578" alt="Шаблон Sedona">
           </a>
           <div class="cart-product">
-            <a href="">
-              <h3 class="product-name">Sedona</h3>
-            </a>
-            <p>Информационный сайт для туристов</p>
-            <a class="button" href="">9 900 ₽</a>
+            <div class="cart-product-wrapper">
+              <a href="">
+                <h3 class="product-name">Sedona</h3>
+              </a>
+              <p>Информационный сайт для туристов</p>
+              <a class="button" href="">9 900 ₽</a>
+            </div>
+            
           </div>
         </li>
         <li class="catalog-item">
@@ -196,6 +192,8 @@
           <a href="#">Следующая</a>
         </li>
       </ul>
+      </div>
+      
 
     </section>
 
