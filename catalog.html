@@ -44,11 +44,29 @@
         <h3 class="display-none">Фильтр шаблонов</h3>
         <form method="get" action="https://echo.htmlacademy.ru">
 
-          <fieldset>
+          <fieldset class="filter-item">
             <legend class="catalog-caption">Стоимость:</legend>
-            <input class="price-range" type="range" min="0" max="20000" step="1000" value="15000">
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  от <input type="number" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  до <input type="number" name="max-price" value="15000">
+                </label>
+              </div>
+            </div>
+            
+            <!-- <input class="price-range" type="range" min="0" max="20000" step="1000" value="15000">
             <label>От<input class="price" type="text" name="price-start" value="0"></label>
-            <label>До<input class="max-price" type="text" name="price-end" value="15000"></label>
+            <label>До<input class="max-price" type="text" name="price-end" value="15000"></label> -->
           </fieldset>
 
           <fieldset>
@@ -103,22 +121,21 @@
       <h3 class="display-none">Список шаблонов</h3>
       <ul class="catalog-list">
         <li class="catalog-item">
+          <div class="cart-browser"></div>
           <a href="">
             <img src="img/catalog-layouts/Sedona.jpg" width="358" height="578" alt="Шаблон Sedona">
           </a>
           <div class="cart-product">
-            <div class="cart-product-wrapper">
               <a href="">
                 <h3 class="product-name">Sedona</h3>
               </a>
-              <p>Информационный сайт для туристов</p>
+              <p>Информационный сайт<br> для туристов</p>
               <a class="button" href="">9 900 ₽</a>
-            </div>
             
           </div>
         </li>
         <li class="catalog-item">
-          <a href=""></a>
+          <div class="cart-browser"></div>
           <img src="img/catalog-layouts/Pink.jpg" width="358" height="578" alt="Шаблон Pink App">
           <div class="cart-product">
             <a href="">
@@ -129,6 +146,7 @@
           </div>
         </li>
         <li class="catalog-item">
+          <div class="cart-browser"></div>
           <a href="">
             <img src="img/catalog-layouts/Borodinsky.jpg" width="358" height="578" alt="Шаблон Barbershop">
           </a>
@@ -136,11 +154,12 @@
             <a href="">
               <h3 class="product-name">Barbershop</h3>
             </a>
-            <p>Сайт салона красоты. Для мужчин, да.</p>
+            <p>Сайт салона красоты.<br> Для мужчин, да.</p>
             <a class="button" href="">9 900 ₽</a>
           </div>
         </li>
         <li class="catalog-item">
+          <div class="cart-browser"></div>
           <a href="">
             <img src="img/catalog-layouts/Mishka.jpg" width="358" height="578" alt="Шаблон Mishka">
           </a>
@@ -148,11 +167,12 @@
             <a href="">
               <h3 class="product-name">Mishka</h3>
             </a>
-            <p>Интернет-магазин вязаных игрушек</p>
+            <p>Интернет-магазин<br> вязаных игрушек</p>
             <a class="button" href="">9 900 ₽</a>
           </div>
         </li>
         <li class="catalog-item">
+          <div class="cart-browser"></div>
           <a href="">
             <img src="img/catalog-layouts/A-plus.jpg" width="358" height="578" alt="Шаблон A Plus">
           </a>
@@ -165,6 +185,7 @@
           </div>
         </li>
         <li class="catalog-item">
+          <div class="cart-browser"></div>
           <a href="">
             <img src="img/catalog-layouts/Kvas.jpg" width="358" height="578" alt="Шаблон Kvas">
           </a>
@@ -172,7 +193,7 @@
             <a href="">
               <h3 class="product-name">Kvas</h3>
             </a>
-            <p>Информационный сайт для туристов</p>
+            <p>Промо-сайт производителя крафтового кваса</p>
             <a class="button" href="">9 900 ₽</a>
           </div>
         </li>
