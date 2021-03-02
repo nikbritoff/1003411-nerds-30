@@ -109,7 +109,7 @@
             </ul>
           </fieldset>
 
-          <button class="filter-button" type="submit"><span>Показать</span></button>
+          <button class="filter-button" type="submit"><span class="text-button">Показать</span></button>
         </form>
       </aside>
 
@@ -215,16 +215,16 @@
 
       <ul class="pagination">
         <li>
-          <a class="pagination-button pagination-button-current">1</a>
+          <a class="pagination-button pagination-button-current"><span class="button-text">1</span></a>
         </li>
         <li>
-          <a class="pagination-button" href="#">2</a>
+          <a class="pagination-button" href="#"><span class="button-text">2</span></a>
         </li>
         <li>
-          <a class="pagination-button" href="#">3</a>
+          <a class="pagination-button" href="#"><span class="button-text">3</span></a>
         </li>
         <li>
-          <a class="pagination-button pagination-button-next" href="#">Следующая</a>
+          <a class="pagination-button pagination-button-next" href="#"><span class="button-text">Следующая</span></a>
         </li>
       </ul>
       </div>
@@ -236,19 +236,18 @@
 
   <footer class="main-footer">
 
-    <div class="main-footer-map-layout-positioner">
-      <section class=" main-footer-map">
-        <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A177f18d07042b0ea10331e998e5316c48fd8d98e2dbd7193a6f8c54041f495c6&amp;source=constructor" width="100%" height="416" frameborder="0"></iframe> -->
-        <div class="footer-contacts">
-          <h2 class="footer-contacts-header">NЁRDS DESIGN STUDIO</h2>
-          <address class="contacts-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
-          <p>
-            тел. <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a>
-          </p>
-          <button class="contacts-button button" href="">Напишите нам</button>
-        </div>
-      </section>
-    </div>
+    <section class=" main-footer-map">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A177f18d07042b0ea10331e998e5316c48fd8d98e2dbd7193a6f8c54041f495c6&amp;source=constructor" width="100%" height="416" frameborder="0"></iframe>
+      <div class="footer-contacts">
+        <h2 class="footer-contacts-header">NЁRDS DESIGN STUDIO</h2>
+        <address class="contacts-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
+        <p>
+          тел. <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a>
+        </p>
+        <button class="contacts-button button" href="">Напишите нам</button>
+      </div>
+    </section>
+
 
 
     <div class="layout-positioner">
@@ -294,11 +293,11 @@
           <div class="modal-contacts-info">
             <p class="modal-item">
               <label class="modal-label" for="field-name">Ваше имя:</label>
-              <input class="modal-name" type="text" name="name" id="field-name" placeholder="Имя Фамилия">
+              <input class="modal-name" type="text" name="name" id="field-name" placeholder="Имя Фамилия" required>
             </p>
             <p class="modal-item">
               <label class="modal-label" for="field-email">Ваш email:</label>
-              <input class="modal-email" type="email" name="email" id="field-email" placeholder="email@example.com">
+              <input class="modal-email" type="email" name="email" id="field-email" placeholder="email@example.com" required>
             </p>
           </div>
 

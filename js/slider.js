@@ -8,7 +8,8 @@ let currentSlide = 'features-slide-1';
 let controlButtons = document.querySelectorAll('.slider-control-button');
 
 for (let i = 0; i < controlButtons.length; i++) {
-  controlButtons[i].addEventListener('click', () => changeSlider(i));
+  // controlButtons[i].addEventListener('click', () => changeSlider(i));
+  controlButtons[i].addEventListener('click', function() {changeSlider(i)});
 }
 
 function changeSlider(number) {

@@ -1,30 +1,12 @@
 @font-face {
   font-family: "Roboto";
-  font-weight: 400;
   font-style: normal;
   src: local("Roboto"),
        url("../fonts/roboto.woff2") format("woff2"),
        url("../fonts/roboto.woff") format("woff");
 
 }
-@font-face {
-  font-family: "Roboto Bold";
-  font-weight: 700;
-  font-style: normal;
-  src: local("Roboto Bold"),
-       url("../fonts/robotobold.woff2") format("woff2"),
-       url("../fonts/robotobold.woff") format("woff");
 
-}
-
-@font-face {
-  font-family: "Roboto Medium";
-  font-weight: 500;
-  font-style: normal;
-  src: local("Roboto Medium"),
-       url("../fonts/robotomedium.woff2") format("woff2"),
-       url("../fonts/robotomedium.woff") format("woff");
-}
 
 :root {
   --basic-black: #000000;
@@ -64,6 +46,7 @@
   height: 100%;
 
   font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: var(--text-black);
@@ -87,7 +70,7 @@ a {
 }
 
 .header {
-  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
@@ -140,7 +123,8 @@ a {
 /* Header */
 
 .main-header {
-  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
   line-height: 30px;
   color: var(--basic-black);
   text-transform: uppercase;
@@ -178,6 +162,7 @@ a {
   padding: 0;
   width: 437px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -347,7 +332,8 @@ a {
 
 
 .services h3 {
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-black);
@@ -421,7 +407,7 @@ a {
 }
 
 .about-us-caption {
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -433,7 +419,7 @@ a {
 }
 
 .about-us-header {
-  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 45px;
   font-weight: 500;
   line-height: 45px;
@@ -500,18 +486,28 @@ a {
   margin: 0;
   padding: 0;
   margin-top: 31px;
-  border-spacing: 5px;
+  border-collapse: collapse;
 }
 
+
+
 .about-us-table-numbers {
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 45px;
   line-height: 64px;
   color: var(--basic-black);
 }
 
+.about-us-table-numbers td {
+  width: 98px;
+}
+
+
+
 .about-us-table-percent {
   font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 26px;
   line-height: 40px;
   color: var(--basic-black);
@@ -532,7 +528,6 @@ a {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  border-bottom: 2px solid var(--basic-gray);
   margin-bottom: 80px;
   position: relative;
 }
@@ -640,13 +635,16 @@ a {
   left: 140px;
   padding-top: 34px;
   padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 47px;
 
   z-index: 10;
 }
 
 
 .footer-contacts-header {
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 18px;
   line-height: 30px;
   color: var(--basic-black);
@@ -681,11 +679,13 @@ a {
 .footer-social {
   display: flex;
   flex-wrap: wrap;
-  height: 217px;
+  padding-top: 68px;
+  padding-bottom: 68px;
 }
 
 .footer-header {
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 36px;
   line-height: 36px;
   color: var(--basic-black);
@@ -753,11 +753,14 @@ a {
 }
 
 .modal {
-  width: 960px;
-  min-height: 590px;
   color: var(--basic-black);
   background-color: var(--basic-white);
   z-index: 1000;
+
+  padding-top: 62px;
+  padding-right: 100px;
+  padding-left: 99px;
+  padding-bottom: 84px;
 
   position: fixed;
   left: 50%;
@@ -775,18 +778,17 @@ a {
 
 .modal-header {
   display: block;
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
   font-style: normal;
   font-size: 45px;
   line-height: 53px;
   color: var(--basic-black);
-  margin-left: 100px;
-  margin-right: 99px;
-  margin-top: 63px;
 }
 
 .modal-label {
-  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   margin-top: 0;
@@ -795,11 +797,11 @@ a {
 }
 
 .modal-contacts-info {
-  margin-top: 37px;
-  margin-left: 100px;
-  margin-right: 100px;
-  display: flex;
-  justify-content: space-between;
+  margin-top: 36px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -818,22 +820,17 @@ a {
   box-sizing: border-box;
 }
 
-.modal-label-textarea {
-  margin-left: 100px;
-  margin-right: 98px;
-}
+
 
 .modal-letter{
-  margin-left: 100px;
-  margin-right: 99px;
-  height: 118px;
+  height: 117px;
+  margin: 0;
   margin-top: 9px;
   padding: 16px;
   box-sizing: border-box;
 }
 
 .modal-submit-button {
-  margin-left: 100px;
   width: 259px;
   margin-top: 47px;
   border: none;
@@ -897,6 +894,7 @@ a {
 .catalog-filter {
   color: var(--text-black);
   font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
 
@@ -916,6 +914,7 @@ a {
 .catalog-caption,
 .product-name {
   font-family: "Roboto Bold", "Arial", sans-serif;
+  font-weight: 700;
   color: var(--basic-black);
   font-size: 18px;
   line-height: 30px;
@@ -985,6 +984,7 @@ a {
 .price-controls label {
   text-transform: uppercase;
   font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 16px;
 }
 
@@ -1097,7 +1097,8 @@ margin-top: 54px;
   background-color: var(--basic-gray);
   border: none;
   border-radius: 3px;
-  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   color: var(--basic-black);
   text-transform: uppercase;
@@ -1333,7 +1334,7 @@ margin-top: 54px;
   height: 50px;
   border-radius: 3px;
 
-  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 500;
   color: var(--basic-black);
   background-color: var(--basic-gray);
@@ -1347,6 +1348,10 @@ margin-top: 54px;
 .pagination-button:active {
   background-color: var(--catalog-button-active);
   box-shadow: 0px 3px 0px 0px rgba(0, 1, 1, 0.1) inset;
+}
+
+.pagination-button:active > .button-text {
+  opacity: 0.3;
 }
 
 .pagination-button-current {
@@ -1369,6 +1374,10 @@ margin-top: 54px;
   border: none;
   background-color: var(--catalog-button-active);
   box-shadow: 0px 3px 0px 0px rgba(0, 1, 1, 0.1) inset;
+}
+
+.pagination-button-current:active > .button-text {
+  opacity: 0.3;
 }
 
 .pagination-button-next {
