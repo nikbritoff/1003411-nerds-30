@@ -119,18 +119,18 @@
         <li class="catalog-sorting-item catalog-current-sorting"><a href="">По цене</a></li>
         <li class="catalog-sorting-item"><a href="">По типу</a></li>
         <li class="catalog-sorting-item"><a href="">По названию</a></li>
-        <ul class="catalog-sorting-toggle">
-          <li class="toggle-item  catalog-current-sorting">
+        <li class="catalog-sorting-toggle">
+          <div class="toggle-item  catalog-current-sorting">
             <a class="toggle-sort-ascending" href="">
               <span class="visually-hidden">Сортировать по возрастанию</span>
             </a>
-          </li>
-          <li class="toggle-item">
+          </div>
+          <div class="toggle-item">
             <a class="toggle-sort-despending" href="">
               <span class="visually-hidden">Сортировать по убыванию</span>
             </a>
-          </li>
-        </ul>
+          </div>
+        </li>
       </ul>
 
       <h3 class="display-none">Список шаблонов</h3>
@@ -237,14 +237,16 @@
   <footer class="main-footer">
 
     <section class=" main-footer-map">
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A177f18d07042b0ea10331e998e5316c48fd8d98e2dbd7193a6f8c54041f495c6&amp;source=constructor" width="100%" height="416" frameborder="0"></iframe>
+      <iframe class="map-widget" src="https://yandex.ru/map-widget/v1/?um=constructor%3A177f18d07042b0ea10331e998e5316c48fd8d98e2dbd7193a6f8c54041f495c6&amp;source=constructor"
+        width="1440" height="416">
+      </iframe>
       <div class="footer-contacts">
         <h2 class="footer-contacts-header">NЁRDS DESIGN STUDIO</h2>
         <address class="contacts-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
         <p>
           тел. <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a>
         </p>
-        <button class="contacts-button button" href="">Напишите нам</button>
+        <a class="contacts-button button" href="">Напишите нам</a>
       </div>
     </section>
 
@@ -286,7 +288,7 @@
 
   <div class="layout-positioner modal-wrapper display-none">
     <div class="modal">
-      <h2 class="display-none">Форма обратной связи</h2>
+      <h2 class="visually-hidden">Форма обратной связи</h2>
       <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
         <fieldset>
           <b class="modal-header">Напишите нам</b>
@@ -297,7 +299,8 @@
             </p>
             <p class="modal-item">
               <label class="modal-label" for="field-email">Ваш email:</label>
-              <input class="modal-email" type="email" name="email" id="field-email" placeholder="email@example.com" required>
+              <input class="modal-email" type="email" name="email" id="field-email" placeholder="email@example.com"
+                required>
             </p>
           </div>
 
@@ -311,6 +314,7 @@
       </form>
     </div>
   </div>
+
 
   <script src="js/modal.js"></script>
 
