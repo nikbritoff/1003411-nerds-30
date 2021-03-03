@@ -797,18 +797,14 @@ a {
   font-size: 16px;
   line-height: 18px;
   margin-top: 0;
-
-  box-sizing: border-box;
 }
 
 .modal-contacts-info {
   margin-top: 36px;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
-  padding: 0;
-  box-sizing: border-box;
+  grid-template-columns: auto auto;
+  column-gap: 358px;
 }
 
 .modal-item {
@@ -828,16 +824,16 @@ a {
 
 
 .modal-letter{
-  height: 117px;
+  height: 95px;
   margin: 0;
   margin-top: 9px;
+  margin-bottom: 47px;
   padding: 16px;
-  box-sizing: border-box;
+  border: none;
 }
 
 .modal-submit-button {
   width: 259px;
-  margin-top: 47px;
   border: none;
   cursor: pointer;
 }
