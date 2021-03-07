@@ -23,6 +23,8 @@
   --active-red: #D7373B;
   --active-green: #00AA62;
   --active-yellow: #E5A722;
+  --active-white: rgba(255, 255, 255, 0.3);
+  --active-black: rgba(0, 0, 0, 0.3);
 
   --text-black: #283136;
   --text-gray: #666666;
@@ -101,11 +103,8 @@ a {
 
 .button:active {
   background-color: var(--active-red);
+  color: var(--active-white);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-}
-
-.button:active > .button-text {
-  opacity: 0.3;
 }
 
 .visually-hidden {
@@ -1196,10 +1195,7 @@ margin-top: 54px;
 .filter-button:active {
   background-color: var(--catalog-button-active);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-}
-
-.filter-button:active > span {
-  opacity: 0.3;
+  color: var(--active-black);
 }
 
 
@@ -1433,10 +1429,7 @@ margin-top: 54px;
 .pagination-button:active {
   background-color: var(--catalog-button-active);
   box-shadow: 0px 3px 0px 0px rgba(0, 1, 1, 0.1) inset;
-}
-
-.pagination-button:active > .button-text {
-  opacity: 0.3;
+  color: var(--active-black);
 }
 
 .pagination-button-current {
@@ -1459,10 +1452,7 @@ margin-top: 54px;
   border: none;
   background-color: var(--catalog-button-active);
   box-shadow: 0px 3px 0px 0px rgba(0, 1, 1, 0.1) inset;
-}
-
-.pagination-button-current:active > .button-text {
-  opacity: 0.3;
+  color: var(--active-black);
 }
 
 .pagination-button-next {
