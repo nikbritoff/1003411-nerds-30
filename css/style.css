@@ -37,6 +37,9 @@
 
   --current-pagination-button-border: #DBDBDB;
 
+  --modal-input-border-basic: #D7DCDE;
+  --modal-input-border-hover: #B4B9BB;
+
 }
 
 
@@ -603,30 +606,32 @@ a {
   margin-top: 60px;
 }
 
-.main-footer-map-layout-positioner {
-  width: 1440px;
-  margin: 0 auto;
-  background-color: inherit;
-}
-
 /* Map */
 
 .main-footer-map {
   width: inherit;
   height: 416px;
-  position: relative;
-
   background-image: url("../img/main-footer-map.png");
   background-size: auto;
   background-position: 0 50%;
+  position: relative;
 }
 
 .map-widget {
   width: 100%;
   border: none;
+  position: absolute;
 }
 
 /* Contacts */
+
+.contacts-wrapper {
+  width: 1160px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .footer-contacts {
   color: var(--text-gray);
@@ -634,8 +639,6 @@ a {
   width: 319px;
   height: 308px;
   box-sizing: border-box;
-
-  position: absolute;
   top: 55px;
   left: 140px;
   padding-top: 34px;
@@ -753,8 +756,51 @@ a {
 
 
 /* Modal */
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translate(-2000%, -50%);
+  }
+
+  70% {
+    transform: translate(-150%, -50%);
+  }
+
+  90% {
+    transform: translate(-100%, -50%);
+  }
+
+  100% {
+    transform: translate(-75%, -50%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+/*  */
+
 .modal-wrapper {
-  position: relative;
+  position: fixed;
 }
 
 .modal {
@@ -768,16 +814,23 @@ a {
   padding-left: 99px;
   padding-bottom: 84px;
 
-  position: fixed;
+  width: 960px;
+  box-sizing: border-box;
+
   top: 50%;
   left: 50%;
-  margin-left: -480px;
-  margin-top: -300px;
-  /* left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
 
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.modal-visible {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-form fieldset {
@@ -818,29 +871,53 @@ a {
   flex-direction: column;
 }
 
+.modal-item .input-error {
+  border: 2px solid var(--hover-red);
+  outline: none;
+  color: var(--hover-red);
+}
+
+.modal-item input.input-error::placeholder,
+.modal-item textarea.input-error::placeholder {
+  color: var(--hover-red);
+}
+
 .modal-item input {
   margin: 0;
   margin-top: 9px;
   width: 360px;
   height: 50px;
   padding-left: 16px;
+  border: 2px solid var(--modal-input-border-basic);
+  border-radius: 3px;
   box-sizing: border-box;
 }
+
+.modal-item input:hover,
+.modal-letter:hover {
+  border-color: var(--modal-input-border-hover);
+}
+
+.modal-item input:focus,
+.modal-letter:focus {
+  border: 2px solid var(--basic-black);
+  outline: none;
+}
+
 
 .modal-email {
   margin-left: 40px;
 }
 
 
-
-
-
-.modal-letter{
+.modal-letter {
   height: 118px;
   margin: 0;
   margin-top: 9px;
   margin-bottom: 47px;
   padding: 16px;
+  border: 2px solid var(--modal-input-border-basic);
+  border-radius: 3px;
   box-sizing: border-box;
 }
 
@@ -872,11 +949,6 @@ a {
   opacity: 0.1;
   border: none;
 }
-
-.modal-visible {
-  display: block;
-}
-
 
 
 /* Catalog */

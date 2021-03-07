@@ -151,18 +151,20 @@
 
   <footer class="main-footer">
 
-
-    <section class=" main-footer-map">
-      <iframe class="map-widget" src="https://yandex.ru/map-widget/v1/?um=constructor%3A177f18d07042b0ea10331e998e5316c48fd8d98e2dbd7193a6f8c54041f495c6&amp;source=constructor"
+    <section class="main-footer-map">
+      <iframe class="map-widget"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A177f18d07042b0ea10331e998e5316c48fd8d98e2dbd7193a6f8c54041f495c6&amp;source=constructor"
         width="1440" height="416">
       </iframe>
-      <div class="footer-contacts">
-        <h2 class="footer-contacts-header">NЁRDS DESIGN STUDIO</h2>
-        <address class="contacts-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
-        <p>
-          тел. <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a>
-        </p>
-        <a class="contacts-button button" href="">Напишите нам</a>
+      <div class="contacts-wrapper">
+        <div class="footer-contacts">
+          <h2 class="footer-contacts-header">NЁRDS DESIGN STUDIO</h2>
+          <address class="contacts-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
+          <p>
+            тел. <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a>
+          </p>
+          <a class="contacts-button button" href="">Напишите нам</a>
+        </div>
       </div>
     </section>
 
@@ -205,34 +207,33 @@
     </div>
   </footer>
 
-  <div class="layout-positioner modal-wrapper display-none">
-    <div class="modal">
-      <h2 class="visually-hidden">Форма обратной связи</h2>
-      <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset>
-          <b class="modal-header">Напишите нам</b>
-          <div class="modal-contacts-info">
-            <p class="modal-item">
-              <label class="modal-label" for="field-name">Ваше имя:</label>
-              <input class="modal-name" type="text" name="name" id="field-name" placeholder="Имя Фамилия" required>
-            </p>
-            <p class="modal-item">
-              <label class="modal-label" for="field-email">Ваш email:</label>
-              <input class="modal-email" type="email" name="email" id="field-email" placeholder="email@example.com"
-                required>
-            </p>
-          </div>
 
+  <div class="modal modal-wrapper display-none">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
+      <fieldset>
+        <b class="modal-header">Напишите нам</b>
+        <div class="modal-contacts-info">
           <p class="modal-item">
-            <label class="modal-label modal-label-textarea" for="field-letter">Текст письма:</label>
-            <textarea class="modal-letter" name="letter" id="field-letter" placeholder="В свободной форме"></textarea>
+            <label class="modal-label" for="field-name">Ваше имя:</label>
+            <input class="modal-name" type="text" name="name" id="field-name" placeholder="Имя Фамилия">
           </p>
-          <button class="button modal-submit-button" type="submit">Отправить</button>
-          <button class="modal-close-button" type="button" aria-label="Закрыть"></button>
-        </fieldset>
-      </form>
-    </div>
+          <p class="modal-item">
+            <label class="modal-label" for="field-email">Ваш email:</label>
+            <input class="modal-email" type="email" name="email" id="field-email" placeholder="email@example.com">
+          </p>
+        </div>
+
+        <p class="modal-item">
+          <label class="modal-label modal-label-textarea" for="field-letter">Текст письма:</label>
+          <textarea class="modal-letter" name="letter" id="field-letter" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button modal-submit-button" type="submit">Отправить</button>
+        <button class="modal-close-button" type="submit" aria-label="Закрыть"></button>
+      </fieldset>
+    </form>
   </div>
+
 
   <script src="js/modal.min.js"></script>
   <script src="js/slider.min.js"></script>
