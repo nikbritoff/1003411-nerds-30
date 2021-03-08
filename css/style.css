@@ -556,6 +556,7 @@ a {
 .about-us-table-text {
   line-height: 18px;
   display: inline-block;
+  vertical-align: middle;
   margin-top: 11px;
 }
 
@@ -580,6 +581,7 @@ a {
 
 .partner-html {
   margin-left: 32px;
+  margin-top: 20px;
 }
 
 .partner-html::after {
@@ -595,6 +597,7 @@ a {
 
 .partner-borodinsky {
   margin-left: 95px;
+  margin-top: 10px;
 }
 
 .partner-borodinsky::after {
@@ -610,6 +613,7 @@ a {
 
 .partner-pink {
   margin-left: 104px;
+  margin-top: 10px;
 }
 
 .partner-pink::after {
@@ -625,6 +629,7 @@ a {
 
 .partner-mishka {
   margin-left: 120px;
+  margin-top: 15px;
 }
 
 .partners img {
