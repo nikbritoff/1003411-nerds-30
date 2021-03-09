@@ -1208,8 +1208,8 @@ margin-top: 54px;
 }
 
 .filter-option:focus-within {
-  outline: 1px solid var(--basic-black);
-  outline: -1px;
+  outline: 2px solid var(--basic-black);
+  outline: -2px;
 }
 
 
@@ -1225,8 +1225,8 @@ margin-top: 54px;
 }
 
 .filter-option-conditions:focus-within {
-  outline: 1px solid var(--basic-black);
-  outline: -1px;
+  outline: 2px solid var(--basic-black);
+  outline: -2px;
 }
 
 .filter-option-conditions:hover label::before{
@@ -1327,7 +1327,6 @@ margin-top: 54px;
 
 .catalog-sorting-item {
   margin: 0;
-  /* margin-bottom: 14px; */
   padding: 0;
   opacity: 0.3;
 }
@@ -1422,7 +1421,6 @@ margin-top: 54px;
   height: 620px;
   width: 360px;
   border-radius: 5px;
-  overflow: hidden;
 }
 
 .catalog-item:hover {
