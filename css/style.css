@@ -1177,10 +1177,6 @@ margin-top: 54px;
   margin-bottom: 20px;
 }
 
-.filter-option:focus {
-  outline: 2px solid var(--basic-black);
-}
-
 .filter-option label {
   position: relative;
   display: block;
@@ -1211,6 +1207,10 @@ margin-top: 54px;
   background-repeat: no-repeat;
 }
 
+.filter-option:focus-within {
+  outline: 1px solid var(--basic-black);
+  outline: -1px;
+}
 
 
 /* filter-conditions  */
@@ -1222,6 +1222,15 @@ margin-top: 54px;
   padding-left: 36px;
   margin-top: 18px;
   margin-bottom: 21px;
+}
+
+.filter-option-conditions:focus-within {
+  outline: 1px solid var(--basic-black);
+  outline: -1px;
+}
+
+.filter-option-conditions:hover label::before{
+  opacity: 1;
 }
 
 .filter-option-conditions:focus {
@@ -1253,9 +1262,11 @@ margin-top: 54px;
 
 
 
-/* Disabled input */
-.disabled-filter-option,
-.disabled-filter-option:hover label::before {
+/* Disabled*/
+
+.filter-checkbox:disabled,
+.filter-checkbox:disabled + label::before,
+.filter-checkbox:disabled + label {
   opacity: 0.3;
 }
 
